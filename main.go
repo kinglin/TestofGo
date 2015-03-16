@@ -2,24 +2,20 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 func main() {
-	var orig string = "56"
-	// var an int
-	var newS string
-	// var err error
-
-	fmt.Printf("The size of ints is: %d\n", strconv.IntSize)
-	// anInt, err = strconv.Atoi(origStr)
-	an, err := strconv.Atoi(orig)
-	if err != nil {
-		fmt.Printf("orig %s is not an integer - exiting with error\n", orig)
-		return
+	var month int = 6
+	var season string
+	switch month {
+	case 1, 2, 3:
+		season = "spring"
+	case 4, 5, 6:
+		season = "summer"
+	case 7, 8, 9:
+		season = "fall"
+	case 10, 11, 12:
+		season = "winter"
 	}
-	fmt.Printf("The integer is %d\n", an)
-	an = an + 5
-	newS = strconv.Itoa(an)
-	fmt.Printf("The new string is: %s\n", newS)
+	fmt.Println(season)
 }
