@@ -1,21 +1,11 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var month int = 6
-	var season string
-	switch month {
-	case 1, 2, 3:
-		season = "spring"
-	case 4, 5, 6:
-		season = "summer"
-	case 7, 8, 9:
-		season = "fall"
-	case 10, 11, 12:
-		season = "winter"
+	items := [...]int{10, 20, 30, 40, 50}
+	for _, item := range items {
+		item *= 2
+		fmt.Println(item)
 	}
-	fmt.Println(season)
 }
